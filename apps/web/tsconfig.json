@@ -1,0 +1,25 @@
+{
+  "exclude": [
+    "node_modules"
+  ],
+  "extends": "tsconfig/nextjs.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true,
+    "paths": {
+      "@frontend.monks/foundation-source/*": [
+        "node_modules/@frontend.monks/platform-foundation-react/dist/*"
+      ],
+    }
+  },
+  "include": [
+    "src",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ],
+}
